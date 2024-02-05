@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>이미지 마우스 오른쪽 버튼 클릭 막기</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const imgs = document.querySelectorAll("img");
+
+        imgs.forEach((img) => {
+          img.addEventListener("contextmenu", (event) => {
+            event.preventDefault();
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <img src="http://placekitten.com/300/300" alt="" />
+  </body>
+</html>
